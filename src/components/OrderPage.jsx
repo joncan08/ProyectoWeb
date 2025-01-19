@@ -1,11 +1,13 @@
+// components/OrderPage.jsx
+
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import OrderSummary from "../components/OrderSummary";
-import useCart from "../hooks/useCart"; // Usamos el hook useCart para obtener el carrito y el total
+import useCart from "../hooks/useCart"; // Importación correcta
 
 const OrderPage = () => {
   const navigate = useNavigate();
-  const { cart, calculateTotal } = useCart(); // Obtenemos el carrito y la función para calcular el total
+  const { cart, setCart, calculateTotal } = useCart(); // Asegúrate de que setCart se recibe correctamente
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
@@ -16,6 +18,8 @@ const OrderPage = () => {
   const handlePlaceOrder = () => {
     // Lógica para enviar el pedido (por ejemplo, llamar a una API)
     alert("Pedido Enviado");
+    setCart([]); // Vaciar el carrito en el estado
+    localStorage.removeItem("cart"); // Eliminar el carrito de localStorage
     navigate("/"); // Redirigir a la página principal después de enviar el pedido
   };
 

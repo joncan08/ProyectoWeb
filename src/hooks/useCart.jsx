@@ -1,13 +1,13 @@
+// hooks/useCart.js
+
 import { useState, useEffect } from "react";
 
 const useCart = () => {
   const [cart, setCart] = useState(() => {
-    // Obtener el carrito del localStorage si existe
     const savedCart = localStorage.getItem("cart");
     return savedCart ? JSON.parse(savedCart) : [];
   });
 
-  // Sincronizar el carrito con el localStorage
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
@@ -35,7 +35,14 @@ const useCart = () => {
   const calculateTotal = () =>
     cart.reduce((total, item) => total + item.price * item.quantity, 0);
 
-  return { cart, addToCart, removeFromCart, clearCart, calculateTotal };
+  return {
+    cart,
+    setCart,
+    addToCart,
+    removeFromCart,
+    clearCart,
+    calculateTotal,
+  };
 };
 
 export default useCart;
