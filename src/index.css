@@ -1,0 +1,218 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Estilos para el Navbar */
+.navbar {
+  background-color: #4caf50; /* Fondo verde */
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-around; /* Distribuye los enlaces de forma equidistante */
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  color: #fff; /* Color blanco para los enlaces */
+  font-size: 18px;
+  text-decoration: none; /* Elimina el subrayado por defecto */
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar a:hover {
+  background-color: #45a049; /* Color más oscuro al pasar el mouse */
+  transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+}
+
+.navbar a.active {
+  background-color: #388e3c; /* Color más oscuro para el enlace activo */
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .navbar a {
+    margin-bottom: 10px; /* Espacio entre los enlaces */
+  }
+}
+
+/* Estilos para la lista de productos */
+.product-list {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se ajusten a la siguiente fila cuando no hay suficiente espacio */
+  justify-content: space-around; /* Distribuye el espacio entre los elementos */
+  gap: 20px; /* Espacio entre las tarjetas */
+  padding: 20px; /* Espaciado alrededor de la lista */
+}
+
+/* Estilos para cada tarjeta de producto */
+.product-card {
+  width: 30%; /* Cada tarjeta ocupará el 30% del ancho disponible */
+  border: 1px solid #ddd; /* Borde suave alrededor de las tarjetas */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 15px;
+  text-align: center; /* Alinea el contenido en el centro */
+  background-color: #fff; /* Fondo blanco */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para las tarjetas */
+  transition: transform 0.3s ease-in-out; /* Efecto de transición en hover */
+}
+
+/* Estilos para la imagen de cada producto */
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover; /* Mantiene la proporción de la imagen sin deformarse */
+  max-height: 200px; /* Limita la altura de la imagen */
+}
+
+/* Efecto de hover para las tarjetas */
+.product-card:hover {
+  transform: scale(
+    1.05
+  ); /* Aumenta el tamaño de la tarjeta al pasar el cursor */
+}
+
+/* Estilos para el botón de agregar al carrito */
+.product-card button {
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.product-card button:hover {
+  background-color: #45a049;
+}
+
+/* Estilos del Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px; /* Separación entre el contenido principal y el footer */
+}
+
+.footer p {
+  font-size: 14px; /* Tamaño de fuente pequeño */
+  margin: 5px 0;
+}
+
+.footer a {
+  color: #4caf50; /* Color verde para los enlaces */
+  text-decoration: none; /* Elimina el subrayado predeterminado */
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Subraya los enlaces al pasar el ratón */
+  color: #45a049; /* Cambia el color del enlace al pasar el ratón */
+}
+
+/* Responsividad para el footer */
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px 0;
+  }
+
+  .footer p {
+    font-size: 12px; /* Tamaño más pequeño en pantallas pequeñas */
+  }
+}
+
+/* Estilos para el resumen del pedido */
+.order-summary {
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.order-summary .cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.order-summary .cart-item button {
+  background-color: #f44336; /* Rojo para el botón de eliminar */
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.order-summary .cart-item button:hover {
+  background-color: #d32f2f;
+}
+
+.order-summary .actions button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.order-summary .actions button:hover {
+  background-color: #45a049;
+}
+
+/* Estilos para la página de resumen de la orden */
+.order-page {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.order-page h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Asegurarse de que los botones estén bien estilizados */
+.order-page button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.order-page button:hover {
+  background-color: #45a049;
+}
