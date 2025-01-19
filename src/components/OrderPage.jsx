@@ -29,7 +29,7 @@ const OrderPage = () => {
         removeFromCart={() => {}} // No es necesario eliminar productos en esta página
         clearCart={() => {}} // No es necesario vaciar el carrito en esta página
       />
-      <button onClick={handlePlaceOrder}>Confirmar Pedido</button>
+      <button onClick={handlePlaceOrder}>Enviar Pedido</button>
     </div>
   );
 };

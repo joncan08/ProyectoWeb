@@ -27,7 +27,7 @@ const OrderSummary = ({ cart, total, removeFromCart, clearCart }) => {
       <h4>Total: ${total}</h4>
       <div className="actions">
         <button onClick={clearCart}>Vaciar Carrito</button>
-        <button onClick={handleConfirmOrder}>Enviar Pedido</button>{" "}
+        <button onClick={handleConfirmOrder}>Confirmar Pedido</button>{" "}
         {/* Redirige a OrderPage */}
       </div>
     </div>
