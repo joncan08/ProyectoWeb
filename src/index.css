@@ -189,30 +189,3 @@ body {
 .order-summary .actions button:hover {
   background-color: #45a049;
 }
-
-/* Estilos para la página de resumen de la orden */
-.order-page {
-  padding: 20px;
-  background-color: #f4f4f4;
-}
-
-.order-page h1 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-/* Asegurarse de que los botones estén bien estilizados */
-.order-page button {
-  padding: 10px 20px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-.order-page button:hover {
-  background-color: #45a049;
-}

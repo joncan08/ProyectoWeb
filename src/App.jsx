@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
+
 import OrderPage from "./components/OrderPage";
 import Footer from "./pages/Footer";
 import HomePage from "./pages/HomePage";
@@ -13,7 +13,7 @@ function App() {
         <Route path="/category/:category" element={<CategoryPage />} />
         <Route path="/order" element={<OrderPage />} />
       </Routes>
-      <Footer /> {/* Agrega el footer aquí */}
+      <Footer />
     </Router>
   );
 }

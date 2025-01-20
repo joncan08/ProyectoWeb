@@ -4,7 +4,6 @@ import ProductList from "../components/ProductList";
 const CategoryPage = () => {
   const { category } = useParams();
 
-  // Lista de productos (esto podría venir de una API o de un archivo de datos)
   const products = [
     {
       id: 1,
@@ -27,7 +26,6 @@ const CategoryPage = () => {
       price: 30,
       image: "react-book.jpg",
     },
-    // Agregar más productos aquí
   ];
 
   // Filtrar los productos por categoría

@@ -1,8 +1,8 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // Importamos el hook useNavigate
+import { useNavigate } from "react-router-dom";
 
 const OrderSummary = ({ cart, total, removeFromCart, clearCart }) => {
-  const navigate = useNavigate(); // Inicializamos el hook useNavigate
+  const navigate = useNavigate();
 
   const handleConfirmOrder = () => {
     // Redirigir al usuario a la página de confirmación del pedido

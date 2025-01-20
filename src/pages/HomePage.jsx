@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ProductList from "../components/ProductList";
 import useCart from "../hooks/useCart";
-import OrderSummary from "../components/OrderSummary"; // Importa OrderSummary
+import OrderSummary from "../components/OrderSummary";
 import Navbar from "../components/Navbar";
 
 const HomePage = () => {

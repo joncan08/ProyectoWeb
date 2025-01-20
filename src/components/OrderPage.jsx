@@ -1,13 +1,11 @@
-// components/OrderPage.jsx
-
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import OrderSummary from "../components/OrderSummary";
-import useCart from "../hooks/useCart"; // Importación correcta
+import useCart from "../hooks/useCart";
 
 const OrderPage = () => {
   const navigate = useNavigate();
-  const { cart, setCart, calculateTotal } = useCart(); // Asegúrate de que setCart se recibe correctamente
+  const { cart, setCart, calculateTotal } = useCart();
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
@@ -30,8 +28,8 @@ const OrderPage = () => {
       <OrderSummary
         cart={cart}
         total={total}
-        removeFromCart={() => {}} // No es necesario eliminar productos en esta página
-        clearCart={() => {}} // No es necesario vaciar el carrito en esta página
+        removeFromCart={() => {}}
+        clearCart={() => {}}
       />
       <button onClick={handlePlaceOrder}>Enviar Pedido</button>
     </div>

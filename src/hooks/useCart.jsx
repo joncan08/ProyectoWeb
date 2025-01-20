@@ -1,5 +1,3 @@
-// hooks/useCart.js
-
 import { useState, useEffect } from "react";
 
 const useCart = () => {
