@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import OrderPage from "./components/OrderPage";
 import Footer from "./pages/Footer";
 import HomePage from "./pages/HomePage";
