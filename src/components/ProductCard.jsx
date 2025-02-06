@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import useCart from "../hooks/useCart";
 
 const ProductCard = ({ product }) => {

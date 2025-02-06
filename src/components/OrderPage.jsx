@@ -14,7 +14,7 @@ const OrderPage = () => {
   }, [cart, calculateTotal]);
 
   const handlePlaceOrder = () => {
-    // Lógica para enviar el pedido (por ejemplo, llamar a una API)
+    // Lógica para enviar el pedido
     alert("Pedido Enviado");
     setCart([]); // Vaciar el carrito en el estado
     localStorage.removeItem("cart"); // Eliminar el carrito de localStorage
